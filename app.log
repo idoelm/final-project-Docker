@@ -1,0 +1,35 @@
+2025-08-03 12:20:32,802 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.1.182:80
+2025-08-03 12:20:32,803 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-03 12:20:39,801 - root - INFO - The user has accessed the path /
+2025-08-03 12:20:39,801 - assigment_1 - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\idoel\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\idoel\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 920, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\idoel\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 939, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\idoel\AppData\Roaming\Python\Python310\site-packages\flask\app.py", line 1212, in make_response
+    raise TypeError(
+TypeError: The view function for 'home' did not return a valid response. The function either returned None or ended without a return statement.
+2025-08-03 12:20:39,860 - werkzeug - INFO - 127.0.0.1 - - [03/Aug/2025 12:20:39] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-08-03 12:20:40,064 - werkzeug - INFO - 127.0.0.1 - - [03/Aug/2025 12:20:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-03 12:22:36,194 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.1.182:80
+2025-08-03 12:22:36,195 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-03 12:22:38,786 - root - INFO - The user has accessed the path /
+2025-08-03 12:22:38,787 - werkzeug - INFO - 127.0.0.1 - - [03/Aug/2025 12:22:38] "GET / HTTP/1.1" 200 -
+2025-08-03 12:22:44,025 - root - INFO - Name david exists in list, access granted
+2025-08-03 12:22:44,025 - werkzeug - INFO - 127.0.0.1 - - [03/Aug/2025 12:22:44] "GET /login/david HTTP/1.1" 200 -
+2025-08-03 12:22:58,378 - root - WARNING - Name bibi does not exists in list, access denied
+2025-08-03 12:22:58,379 - werkzeug - INFO - 127.0.0.1 - - [03/Aug/2025 12:22:58] "GET /login/bibi HTTP/1.1" 200 -
+2025-08-03 12:23:53,434 - root - INFO - ['nadav', 'moshe', 'haim', 'ido', 'david', 'jhon', 'dudu']
+2025-08-03 12:23:53,434 - werkzeug - INFO - 127.0.0.1 - - [03/Aug/2025 12:23:53] "GET /addName/dudu HTTP/1.1" 200 -
+2025-08-03 12:24:08,751 - root - INFO - Name dudu exists in list, access granted
+2025-08-03 12:24:08,751 - werkzeug - INFO - 127.0.0.1 - - [03/Aug/2025 12:24:08] "GET /login/dudu HTTP/1.1" 200 -
+2025-08-03 12:24:36,232 - werkzeug - INFO - 127.0.0.1 - - [03/Aug/2025 12:24:36] "GET /addName/dudu HTTP/1.1" 200 -
