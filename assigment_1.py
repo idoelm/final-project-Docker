@@ -48,18 +48,13 @@ def addName(new_name):
     if searchName(new_name):
         return printColors.printBlack("The username exists in the system.")
     else:
-        try:
-            with open("config.json", "r", encoding='utf-8') as file:
-                list_name = json.load(file)
-                list_name.append(new_name)
-                with open("config.json", "w", encoding='utf-8') as file:
-                    json.dump(list_name, file, indent=4, ensure_ascii=False)
-                    logging.info(list_name)
-                return printColors.printGreen("Name " + new_name + " Added successfuly")
-        except FileNotFoundError:
-            logging.critical("Error: Config file missing.")
-
-
+        users = loadUsers()
+        users.add(new_name)
+    with open("config.json", "w", encoding='utf-8') as file:
+        json.dump(list(users), file, indent=4, ensure_ascii=False)
+        logging.info(f"Added {new_name}. Current list: {users}")
+        return printColors.printGreen("Name " + new_name + " added successfully.")
+        
 def searchName(name):
     users = loadUsers()
     if name in users:
